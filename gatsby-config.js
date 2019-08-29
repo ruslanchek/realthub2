@@ -8,6 +8,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     {
+      resolve: 'gatsby-plugin-extract-schema',
+      options: {
+        dest: `${__dirname}/graphql/schema.json`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -15,11 +21,11 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-graphql",
+      resolve: 'gatsby-source-graphql',
       options: {
-        typeName: "SWAPI",
-        fieldName: "swapi",
-        url: "https://api.graphcms.com/simple/v1/swapi",
+        typeName: 'SWAPI',
+        fieldName: 'swapi',
+        url: 'https://api.graphcms.com/simple/v1/swapi',
       },
     },
     `gatsby-transformer-sharp`,
@@ -40,4 +46,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
