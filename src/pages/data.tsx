@@ -45,6 +45,7 @@ export const query = graphql`
     swapi {
       allFilms {
         id
+        title
       }
     }
   }
